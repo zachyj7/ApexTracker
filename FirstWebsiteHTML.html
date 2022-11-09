@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=9">
+    <link rel="stylesheet" type="text/css" href="FirstWebsiteCSS.css">
+</head>
+<body>
+    <script src="FirstWebsiteJS.js"></script>
+
+    <h2 class="titlecard">Welcome to Zach's Apex Tracker!</h2>
+
+    <div class="gamertag">
+        <label for="playername" id="gamertaglabel">Enter PS4 Gamertag:</label>
+        <input type="text" id="playername" name="playername"><br><br>
+        <button class="enterbutton">Enter</button>
+    </div>
+
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Map')">Map</button>
+        <button class="tablinks" onclick="openTab(event, 'Crafting')">Crafting Rotation</button>
+        <button class="tablinks" onclick="openTab(event, 'Predator')">Predator</button>
+    </div>
+
+    <div id="Map" class="tabcontent">
+        <h3>Current Map</h3>
+        <p>This is the current Map</p>
+    </div>
+
+    <div id="Crafting" class="tabcontent">
+        <h3>Current Replicator Items</h3>
+        <p>These are the current items in the replicator</p> 
+    </div>
+
+    <div id="Predator" class="tabcontent">
+        <h3>RP to reach Predator</h3>
+        <p>This is the RP needed to reach Predator</p>
+    </div>
+   
+</body>
+</html> 
