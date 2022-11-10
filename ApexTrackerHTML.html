@@ -12,7 +12,7 @@
     <div class="gamertag">
         <label for="playername" id="gamertaglabel">Enter PS4 Gamertag:</label>
         <input type="text" id="playername" name="playername"><br><br>
-        <button class="enterbutton">Enter</button>
+        <button class="enterbutton" onclick="getData('https://api.mozambiquehe.re/maprotation?auth=587d7e81d0adbec869b252242804614f')">Enter</button>
     </div>
 
 
@@ -23,19 +23,21 @@
     </div>
 
     <div id="Map" class="tabcontent">
-        <h3>Current Map</h3>
-        <p>This is the current Map</p>
+        <h3>The Current Map is:&nbsp;</h3>
+        <h3 id="currentmap"></h3>
+        <p>Time Remaining:&nbsp;</p>
+        <p id="timeremainingmap"></p>
     </div>
 
     <div id="Crafting" class="tabcontent">
-        <h3>Current Replicator Items</h3>
-        <p>These are the current items in the replicator</p> 
+        <h3 id="currentcraft">Current Replicator Items</h3>
+        <p id="timeremainingcraft">These are the current items in the replicator</p> 
     </div>
 
     <div id="Predator" class="tabcontent">
-        <h3>RP to reach Predator</h3>
-        <p>This is the RP needed to reach Predator</p>
+        <h3 id="currentrp">RP to reach Predator</h3>
+        <p id="timeremainingrp">This is the RP needed to reach Predator</p>
     </div>
-   
+
 </body>
 </html> 
