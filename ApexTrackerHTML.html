@@ -9,17 +9,17 @@
 
     <h2 class="titlecard">Welcome to Zach's Apex Tracker!</h2>
 
-    <div class="gamertag">
+    <!-- <div class="gamertag">
         <label for="playername" id="gamertaglabel">Enter PS4 Gamertag:</label>
         <input type="text" id="playername" name="playername"><br><br>
         <button class="enterbutton" onclick="getData('https://api.mozambiquehe.re/maprotation?auth=587d7e81d0adbec869b252242804614f')">Enter</button>
-    </div>
+    </div> -->
 
 
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Map')">Map</button>
         <button class="tablinks" onclick="openTab(event, 'Crafting')">Crafting Rotation</button>
-        <button class="tablinks" onclick="openTab(event, 'Predator')">Predator</button>
+        <button class="tablinks" onclick="openTab(event, 'Predator')">Master/Predator Count</button>
     </div>
 
     <div id="Map" class="tabcontent">
@@ -27,6 +27,7 @@
         <h3 id="currentmap"></h3>
         <p>Time Remaining:&nbsp;</p>
         <p id="timeremainingmap"></p>
+        <img src="" alt="map" width="800" height="450" id="mappicture">
     </div>
 
     <div id="Crafting" class="tabcontent">

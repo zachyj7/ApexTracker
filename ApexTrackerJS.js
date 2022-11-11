@@ -13,10 +13,23 @@ function openTab(evt, idName) {
     document.getElementById(idName).style.display = "block";
     evt.currentTarget.className += " active";     
 
-    getData(apiurl, idName)
+    getData(idName)
 }
 
-async function getData(url, idName) {
+async function getData(idName) {
+
+  switch(idName) {
+    case idName = "Map":
+      url = "https://api.mozambiquehe.re/maprotation?auth=587d7e81d0adbec869b252242804614f"
+      break;
+    case idName = "Crafting":
+      url = "https://api.mozambiquehe.re/crafting?auth=587d7e81d0adbec869b252242804614f"
+      break;
+    case idName = "Predator":
+      url = "https://api.mozambiquehe.re/predator?auth=587d7e81d0adbec869b252242804614f"
+      break;
+  }
+
   const response = await fetch(url);
   var data = await response.json();
   console.log(data);
@@ -39,10 +52,27 @@ async function getData(url, idName) {
 function displayMap(data) {
   document.getElementById("currentmap").innerHTML = data.current.map
   document.getElementById("timeremainingmap").innerHTML = data.current.remainingTimer
+  switch(data.current.map) {
+    case data.current.map = "King's Canyon":
+      document.getElementById("mappicture").src = "SupportFiles/kingscanyon.jpg"
+      break;
+    case data.current.map = "World's Edge":
+      document.getElementById("mappicture").src = "SupportFiles/worldsedge.jpg"
+      break;
+    case data.current.map = "Olympus":
+      document.getElementById("mappicture").src = "SupportFiles/olympus.jpg"
+      break;
+    case data.current.map = "Storm Point":
+      document.getElementById("mappicture").src = "SupportFiles/stormpoint.jpg"
+      break;
+    case data.current.map = "Broken Moon":
+      document.getElementById("mappicture").src = "SupportFiles/brokenmoon.jpg"
+      break;
+  }
 }
 
 function displayCrafting(data) {
-  document.getElementById("currentcraft").innerHTML += data.current.map
+  document.getElementById("currentcraft").innerHTML = data.current.map
 }
 
 function displayPredator(data) {
